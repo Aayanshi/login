@@ -1,5 +1,3 @@
-
-
 const create=()=>{
   return(
       <div className ="container 
@@ -32,7 +30,7 @@ const create=()=>{
                 htmlFor="terms"
                 className=" text-sm text-cyan-500"
               >
-                I Agree To Tidio's{' '}
+                I Agree To Tidio&apos;s{' '}
                 <a href="#" className="text-cyan-500 hover:underline">
                   Terms & Conditions
                 </a>{' '}
