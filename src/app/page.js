@@ -30,11 +30,12 @@ const Page = () => {
       style={{ backgroundImage:`url('${BG.src}')` }}
     >
         <div className="container md:container md:h-screen flex flex-col md:flex-row items-center justify-center mx-auto">
-          <div className="w-full lg:w-10/12 md:flex bg-white p-4 md:p-12 items-center justify-between mx-auto shadow-lg">
-
+          <div className="w-full lg:w-10/12 md:flex bg-white p-4 md:c-pad items-center justify-between mx-auto shadow-lg">
+            <div className='w-full md:flex bg-white items-center justify-between mx-auto  '>
             {/* Left Section */}
+            <div className='left w-full lg:w-1/2 border-r'>
             <div 
-              className="w-full lg:w-1/2 m-auto block max-w-sm text-center rounded-lg bg-white bg-cover md:border-r mb-4 md:mb-0"
+              className="   m-auto block lg:max-w-sm text-center rounded-lg bg-white bg-cover   mb-4 md:mb-0 "
               style={{ minHeight: '500px' }} // Fix the height to prevent layout shifts
             >
              
@@ -49,6 +50,7 @@ const Page = () => {
               <button className="bg-cyan-500 text-white py-2 px-10 rounded-[5px] hover:bg-cyan-500 focus:outline-none w-full md:w-auto text-center">
                 Learn More
               </button>
+            </div>
             </div>
 
             {/* Right Section */}
@@ -91,6 +93,7 @@ const Page = () => {
                   </p>
                 </div>
               </div>
+            </div>
             </div>
           </div>
         </div>
