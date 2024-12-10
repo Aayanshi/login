@@ -1,7 +1,7 @@
 const create=()=>{
   return(
       <div className ="container 
-       md:container w-full px-4 md:px-6">
+       md:container w-full pt-4 px-4 md:px-6">
         <h2 className="text-xl md:text-2xl font-bold text-gray-800 text-left">
             Create A Free Account
         </h2>
@@ -24,14 +24,14 @@ const create=()=>{
           <input type="password" placeholder="password" className="border border-[#bfbfbf00] bg-[#F4F4F4] text-base p-3 md:p-4 w-full rounded-md focus:outline-none focus:border focus:border-[#bfbfbf]" />
           <input type="password" placeholder="Confirm password" className="border border-[#bfbfbf00] bg-[#F4F4F4] text-base p-3 md:p-4 w-full rounded-md focus:outline-none focus:border focus:border-[#bfbfbf]" />
         </div>
-         <div className="flex items-center mb-4 mt-2">
+         <div className="flex items-center mt-3 mb-2">
             <input
                 type="checkbox"
                 id="terms"
                 className="w-4 h-4 text-cyan-500 border-gray-300 rounded focus:ring-2 focus:ring-text-cyan-500 mr-2" required />
               <label
                 htmlFor="terms"
-                className=" text-sm text-cyan-500"
+                className=" text-sm md:text-sm  text-cyan-500"
               >
                 I Agree To Tidio&apos;s{' '}
                 <a href="#" className="text-cyan-500 hover:underline">
@@ -43,7 +43,7 @@ const create=()=>{
                 </a>
               </label>
           </div>
-          <div className="mt-6">
+          <div className="mt-2">
           <button
               type="submit"
               className="bg-cyan-500 text-white text-base w-full p-4 rounded-md hover:bg-cyan-600 transition duration-300

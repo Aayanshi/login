@@ -128,7 +128,7 @@ export default function Login() {
   };
 
   return (
-    <div className="flex justify-center items-center  px-4 md:px-0">
+    <div className="flex justify-center items-center  pt-4 px-4 md:px-0">
       <div className="w-full rounded-lg md:px-6">
         <h2 className="text-xl md:text-2xl font-bold text-gray-800 text-left">
           Login
@@ -163,13 +163,13 @@ export default function Login() {
               onChange={(e) => setPassword(e.target.value)} // Update password state
             />
           </div>
-          <div className="mb-4 mt-2 text-left">
-            <span className="text-cyan-500 text-xs md:text-sm cursor-pointer hover:underline">
+          <div className="mt-2 mb-2 text-left">
+            <span className="text-cyan-500 text-sm md:text-sm cursor-pointer hover:underline">
               Forgot password?
-            </span>
+            </span> 
           </div>
 
-          <div className="mt-6">
+          <div className="mt-2">
             <button
               type="submit"
               className="bg-cyan-500 text-white text-base w-full p-4 rounded-md hover:bg-cyan-600 transition duration-300

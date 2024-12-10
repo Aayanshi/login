@@ -37,8 +37,8 @@ const Page = () => {
               className="w-full lg:w-1/2 m-auto block max-w-sm text-center rounded-lg bg-white bg-cover md:border-r mb-4 md:mb-0"
               style={{ minHeight: '500px' }} // Fix the height to prevent layout shifts
             >
-              {/* key={gif} */}
-              <img  src={GIF.src} className="w-full" />
+             
+              <img key={gif} src={GIF.src} className="w-full" />
               <h2 className="text-xl font-bold text-gray-800 mb-2">
                 AUTOMATE ACROSS YOUR TEAMS
               </h2>
