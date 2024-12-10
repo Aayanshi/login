@@ -122,15 +122,15 @@ export default function Login() {
       localStorage.setItem('token', response.data.token);
 
     } catch (error) {
-      console.error('Login error:', error);
+      console.log('Login error:', error);
       setError('Invalid email or password. Please try again.');
     }
   };
 
   return (
     <div className="flex justify-center items-center  px-4 md:px-0">
-      <div className="w-full max-w-md rounded-lg md:p-6">
-        <h2 className="text-xl md:text-2xl font-bold text-gray-800 text-left mb-4">
+      <div className="w-full rounded-lg md:px-6">
+        <h2 className="text-xl md:text-2xl font-bold text-gray-800 text-left">
           Login
         </h2>
         <p className="text-sm text-gray-800 text-left mb-6 py-2">
@@ -144,7 +144,7 @@ export default function Login() {
         )}
 
         <form onSubmit={handleLogin}>
-          <div>
+          <div className="mt-2" >
             <input
               type="email"
               placeholder="Email Address or mobile number"
@@ -154,7 +154,7 @@ export default function Login() {
             />
           </div>
 
-          <div className="mt-4">
+          <div className="mt-2">
             <input
               type="password"
               placeholder="Password"
@@ -163,8 +163,7 @@ export default function Login() {
               onChange={(e) => setPassword(e.target.value)} // Update password state
             />
           </div>
-
-          <div className="mt-2 text-left">
+          <div className="mb-4 mt-2 text-left">
             <span className="text-cyan-500 text-xs md:text-sm cursor-pointer hover:underline">
               Forgot password?
             </span>
@@ -173,7 +172,8 @@ export default function Login() {
           <div className="mt-6">
             <button
               type="submit"
-              className="bg-cyan-500 text-white text-sm md:text-base w-full p-4 md:p-2 rounded-md hover:bg-cyan-600 transition duration-300"
+              className="bg-cyan-500 text-white text-base w-full p-4 rounded-md hover:bg-cyan-600 transition duration-300
+              focus:outline-none focus:ring-2 focus:ring-cyan-500"
             >
               Login
             </button>
