@@ -4,7 +4,7 @@ import "./globals.css";
 
 const robotoSlab = Roboto_Slab({
   subsets: ['latin'], // Load the Latin character set
-  weight: ['400', '700'], // Define font weights you need
+  weight: ['100','200','300','400','500','600', '700','800','900'], 
 });
 
 const geistSans = localFont({

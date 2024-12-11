@@ -21,12 +21,36 @@ body {
   background: var(--background);
   font-family: "Roboto Slab", serif;
 }
-@media (max-width:767px){
-.left{
-  border: unset;
-}
 
-}
 .c-pad{
   padding: 3rem 3rem 3rem 0;
+  margin-top: 7rem;
+  margin-bottom: 7rem;
 }
+
+@media (max-width:767px){
+  .left{
+  
+    border: unset;
+  }
+  .c-pad{
+    padding: 20px;
+  }
+  
+  
+  }
+  /* .custom-checkbox {
+    
+    border: 1px solid cyan;  
+     
+    outline: none;  
+    cursor: pointer;
+  }
+  
+   .custom-checkbox:checked {
+     border-color: cyan;  
+  } */
+  
+   
+  
+   

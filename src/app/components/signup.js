@@ -21,6 +21,112 @@ const Signup=()=>{
 export default Signup;
 
 
+
+// "use client"; 
+// import { useState } from 'react';
+// import axios from 'axios';
+// import { useRouter } from 'next/navigation';
+
+// export default function Signup() {
+//   const [username, setUsername] = useState('');
+//   const [email, setEmail] = useState('');
+//   const [password, setPassword] = useState('');
+//   const [confirmPassword, setConfirmPassword] = useState('');
+//   const [errorMessage, setErrorMessage] = useState('');
+
+//   const router = useRouter();
+
+//   const handleSignup = async (e) => {
+//     e.preventDefault();
+
+//     if (password !== confirmPassword) {
+//       alert("Passwords don't match");
+//       return;
+//     }
+
+//     try {
+//       const response = await axios.post('https://urlpt.technians.in/register/', {
+//         username,
+//         email,
+//         password, 
+//         confirmPassword,
+//       });
+
+//       // Check if the response status indicates success
+//       if (response.status >= 200 && response.status < 300) {
+//         // Redirect to login page after successful signup
+//         router.push('/pages/login');
+//       }
+//        else {
+//         // Handle unexpected response statuses
+//         setErrorMessage('Signup failed. Please try again.');
+//       }
+//     } catch (error) {
+//       console.error('Signup error:', error.response?.data || error.message);
+//       setErrorMessage(error.response ? error.response.data.message : 'Signup failed. Please try again.');
+//     }
+//   };
+
+//   return (
+//     <div className="signup-form">
+//       <h2>Signup</h2>
+//       {errorMessage && <p className="error-message">{errorMessage}</p>}
+//       <form onSubmit={handleSignup}>
+//         <input
+//           type="text"
+//           placeholder="Username"
+//           value={username}
+//           onChange={(e) => setUsername(e.target.value)}
+//           required
+//         />
+//         <input
+//           type="email"
+//           placeholder="Email"
+//           value={email}
+//           onChange={(e) => setEmail(e.target.value)}
+//           required
+//         />
+//         <input
+//           type="password"
+//           placeholder="Password"
+//           value={password}
+//           onChange={(e) => setPassword(e.target.value)}
+//           required
+//         />
+//         <input
+//           type="password"
+//           placeholder="Confirm Password"
+//           value={confirmPassword}
+//           onChange={(e) => setConfirmPassword(e.target.value)}
+//           required
+//         />
+//         <button type="submit">Signup</button>
+//       </form>
+//     </div>
+//   );
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // "use client"; 
 // import { useState } from 'react';
 // import { useRouter } from 'next/navigation';
