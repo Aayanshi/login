@@ -39,7 +39,13 @@ export default function create() {
       }
     } catch (error) {
       console.log('Signup error:', error.response?.data || error.message);
-      setErrorMessage(error.response ? error.response.data.message : 'Signup failed. Please try again.');
+      setErrorMessage(error.response ? error.response.data.message : 'Signup failed. Please try again')
+      setUsername('')
+      setEmail('')
+      setPassword('')
+      setConfirmPassword('')
+      
+      ;
     }
   };
 
@@ -53,8 +59,9 @@ export default function create() {
             <p className="text-[15px] text-black text-left mb-6 pt-2 px-4 md:px-0">
               To Access Sync Space Home
             </p> 
-
-            {errorMessage && <p className="error-message">{errorMessage}</p>}
+            
+            {errorMessage && 
+            <div className=" text-red-500 text-base font-medium mb-4 error-message">{errorMessage}</div>}
 
         <form onSubmit={handleSignup}>
           <div className="grid gap-2 sm:grid-cols-2">
@@ -76,7 +83,7 @@ export default function create() {
             text-black"/>
         </div>
         <div className="grid gap-2 sm:grid-cols-2 mt-2">
-
+          
           <input type="password" placeholder="Password" 
           value={password}
           onChange={(e) => setPassword(e.target.value)}

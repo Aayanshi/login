@@ -36,6 +36,8 @@ export default function Login() {
     } catch (error) {
       console.log('Login error:', error);
       setError('Invalid email or password. Please try again.');
+      setEmail('')
+      setPassword('')
     }
   };
 
@@ -50,7 +52,7 @@ export default function Login() {
         </p>
 
         {error && (
-          <div className="text-red-500 text-sm mb-4">
+          <div className="text-red-500 text-base font-medium mb-4">
             {error}
           </div>
         )}
