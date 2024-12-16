@@ -1,13 +1,20 @@
 "use client"; 
+import { CiRead } from "react-icons/ci";
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import axios from 'axios';
+;
 
 export default function Login() {
   const [email, setEmail] = useState(''); // Fixed from setUsername to setEmail
   const [password, setPassword] = useState('');
   const [error, setError] = useState(''); // State to display error message
   const router = useRouter();
+  const [show,setShow] = useState(false)
+
+  const handleClick = ()=>{
+    setShow(!show)
+  }
 
   const handleLogin = async (e) => {
     e.preventDefault(); // Prevent form from refreshing the page
@@ -68,14 +75,19 @@ export default function Login() {
             />
           </div>
 
-          <div className="mt-2">
+          <div className=" relative mt-2 ">
             <input
-              type="password"
+              type={show ? "text" : "password"}
               placeholder="Password"
-              className="border-[#bebebe] border  bg-[#F4F4F4] text-[15px] p-3 md:py-6 md:px-2 w-full rounded-sm focus:outline-none focus:border focus:border-[#bfbfbf] text-black"
+              className=" relative
+              border-[#bebebe] border  bg-[#F4F4F4] text-[15px] p-3 md:py-6 md:px-2 w-full rounded-sm focus:outline-none focus:border focus:border-[#bfbfbf] text-black"
               value={password} // Controlled input
               onChange={(e) => setPassword(e.target.value)} // Update password state
             />
+            <span onClick={handleClick}
+            className="absolute flex items-center 
+            m-auto  right-3 top-0 bottom-0
+            text-2xl cursor-pointer text-[#bebebe] hover:text-cyan-500"><CiRead ></CiRead></span>
           </div>
           <div className="mt-2 mb-2 text-left">
             <span className="text-cyan-500 text-sm md:text-sm cursor-pointer hover:underline">
